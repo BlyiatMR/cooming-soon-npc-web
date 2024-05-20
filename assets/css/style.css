@@ -1,0 +1,120 @@
+/*
+Template Name: Techsoon - Coming Soon HTML Template
+Version: 1.0.0
+Author: Techzaa
+File: Main Css File
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.wave {
+    position: absolute;
+    left: 0px;
+    height: 100%;
+    width: 200%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+
+.wave-one {
+    background-size: 50% 80px;
+}
+
+.wave-anim .wave-one {
+    animation: move_wave 30s linear infinite;
+}
+
+.wave-two {
+    background-size: 50% 120px;
+}
+
+.wave-anim .wave-two {
+    animation: move_wave 10s linear infinite;
+}
+
+.wave-three {
+    background-size: 50% 100px;
+}
+
+.wave-anim .wave-three {
+    animation: move_wave 15s linear infinite;
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1);
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1);
+    }
+}
+
+html {
+    @apply relative scroll-smooth;
+}
+
+body {
+    font-size: 15px;
+    @apply font-body overflow-x-hidden text-gray-700;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply font-semibold;
+}
+
+.navbar-show {
+    height: 6rem;
+    opacity: 1;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.flip-card-top {
+    animation: flip-top 350ms ease-in;
+    transform-origin: bottom;
+}
+
+@keyframes flip-top {
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+.flip-card-bottom {
+    animation: flip-bottom 350ms ease-in-out 350ms;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+
+.border-b-solid {
+    border-bottom: solid;
+    @apply border-b-sky-500;
+}
